@@ -46,6 +46,7 @@ export default {
     },
     changeSection(event){
       this.currentSection = event.target.innerText;
+      this.$emit("notify", this.currentSection)
       const rect = event.target.getBoundingClientRect();
       const section = document.getElementById('menu').getBoundingClientRect();
       this.width = rect.width;
